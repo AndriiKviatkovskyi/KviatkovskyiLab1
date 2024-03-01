@@ -1,0 +1,40 @@
+﻿<Window x:Class="KviatkovskyiLab1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KviatkovskyiLab1"
+        mc:Ignorable="d"
+        Title="BirthdayProgram" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <RadialGradientBrush>
+                <GradientStop Color="#FF282E90" Offset="1"/>
+                <GradientStop Color="#FF777FEF" Offset="0"/>
+            </RadialGradientBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="3*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label Grid.Column="1" FontSize ="18" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Clarendon" Margin="13,0,0,0">Choose your birthdate</Label>
+        <DatePicker Name="PickedBirthday" Grid.Row="1" Grid.Column="1" Margin="10,10,10,10"></DatePicker>
+        <Button Grid.Row="2" Grid.Column="1" Margin="10,10,10,10" FontFamily="Clarendon" Click="Button_Click">Get information</Button>
+        <Label Grid.Column="0" Grid.Row="3" FontSize ="18" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Clarendon" Margin="13,0,0,0">Your western zodiac</Label>
+        <Label Grid.Column="1" Grid.Row="3" FontSize ="18" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Clarendon" Margin="13,0,0,0">Your age</Label>
+        <Label Grid.Column="2" Grid.Row="3" FontSize ="18" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Clarendon" Margin="13,0,0,0">Your chinese zodiac</Label>
+        <TextBlock Name="ZodiacWestern" Grid.Row="4" Grid.Column="0" FontSize ="20" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Clarendon"/>
+        <TextBlock Name="Age" Grid.Column="1" Grid.Row="4" FontSize ="20" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Clarendon" Margin="13,0,0,0"></TextBlock>
+        <TextBlock Name="ZodiacChinese" Grid.Column="2" Grid.Row="4" FontSize ="20" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Clarendon"></TextBlock>
+        <TextBlock Name="Congrats" Grid.Column="1" Grid.Row="5" FontSize ="15" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Clarendon" Margin="13,0,0,0"></TextBlock>
+    </Grid>
+</Window>
